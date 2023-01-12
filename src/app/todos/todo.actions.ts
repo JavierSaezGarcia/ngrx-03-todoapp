@@ -4,3 +4,8 @@ export const crear = createAction(
     '[Todo Component] Crear todo',
     props<{texto: string}>()
 );
+
+export const toggle = createAction(
+    '[TODO] Toggle Todo',
+    props<{ id: number }>()
+)
