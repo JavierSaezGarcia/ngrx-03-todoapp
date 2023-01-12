@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//ngrx
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { TodoModule } from './todos/todo.module';
 import { FooterComponent } from './footer/footer.component';
+import { todoReducer } from './todos/todo.reducer';
 
 
 @NgModule({
@@ -13,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule, 
-    TodoModule
+    TodoModule,
+    StoreModule.forRoot({ todos: todoReducer })
     
   ],
   providers: [],
