@@ -22,12 +22,22 @@ const _todoReducer = createReducer(
                     completado: !todo.completado
                 }
             }
-            return todo;
-            
-            
-            
+            return todo;   
+                        
         })
-    } )
+    }),
+    on(acciones.editar, (state, { id, texto }) => {
+        return state.map( todo => {
+            if( todo.id === id ){
+                return {
+                    ...todo,
+                    texto: texto
+                }
+            }
+            return todo;  
+        });
+    }),
+    on(acciones.borrar, (state, { id }) => state.filter( todo => todo.id !== id))
 );
 
 export function todoReducer( state: Todo[] = estadoInicial, action: Action){
