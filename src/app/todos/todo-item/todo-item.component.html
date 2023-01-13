@@ -8,7 +8,7 @@
         [formControl]="checkCompletado"
         type="checkbox">
        
-      <label (click)="editar()"> {{ todo.texto }}</label>
+      <label (click)="editar()"> {{ todo.texto | titlecase }}</label>
 
       <button class="destroy" (click)="borrar()"></button>
       

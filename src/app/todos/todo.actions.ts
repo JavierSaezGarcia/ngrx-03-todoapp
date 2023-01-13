@@ -1,7 +1,10 @@
 import { createAction, props } from '@ngrx/store';
 
+
+export const limpiarTodos = createAction('[TODO] Limpiar TODOS');
+
 export const crear = createAction(
-    '[Todo Component] Crear todo',
+    '[TODO] Crear Todo',
     props<{texto: string}>()
 );
 
@@ -19,6 +22,8 @@ export const borrar = createAction(
 );
 
 export const toggleAll = createAction(
-    '[TODO] Completado Todo',
+    '[TODO] Toggle TodoAll',
     props<{ completado: boolean }>()
 );
+
+
