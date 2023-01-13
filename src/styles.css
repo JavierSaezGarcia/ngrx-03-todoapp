@@ -41,7 +41,7 @@ body {
 }
 
 .todoapp {
-	min-width: 625px !important;
+	min-width: 650px !important;
 	
 	background: #fff;
 	margin: 130px 0 40px 0;
@@ -305,8 +305,15 @@ body {
 .todo-count strong {
 	font-weight: bold;
 	font-style:normal;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 	
+}
+.badge {
+	background-color: white;
+	color: rgb(7, 102, 7);
+	padding: 1px 5px;
+	text-align: center;
+	border-radius: 100%;
 }
 
 .filters {
@@ -412,11 +419,4 @@ html .clear-completed:active {
 .toggle-all:focus + label {
 	box-shadow: 0 0 2px 2px #CF7D7D;
 	outline: 0;
-}
-.badge {
-	background-color: white;
-	color: rgb(0, 0, 0);
-	padding: 1px 5px;
-	text-align: center;
-	border-radius: 100%;
 }
